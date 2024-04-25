@@ -1,0 +1,34 @@
+[
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83016464.26507516, minimum packet length in the flow was 50.0, maximum packet length in the flow was 53.0, magnitue was 10.04848621375532, sum of packet lengths in the flow was 530.8, average packet length in the flow was 50.492429196190805, packet's length was 50.4, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 6688.5, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83365360.24148796, minimum packet length in the flow was 54.0, maximum packet length in the flow was 54.0, magnitue was 10.392304845413264, sum of packet lengths in the flow was 567.0, average packet length in the flow was 54.0, packet's length was 54.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 81.54, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83344117.7961728, minimum packet length in the flow was 54.0, maximum packet length in the flow was 54.0, magnitue was 10.392304845413264, sum of packet lengths in the flow was 567.0, average packet length in the flow was 54.0, packet's length was 54.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 54.0, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83365544.11416693, minimum packet length in the flow was 54.0, maximum packet length in the flow was 54.0, magnitue was 10.392304845413264, sum of packet lengths in the flow was 567.0, average packet length in the flow was 54.0, packet's length was 54.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 96.66, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83362271.31687036, minimum packet length in the flow was 54.0, maximum packet length in the flow was 54.0, magnitue was 10.392304845413264, sum of packet lengths in the flow was 567.0, average packet length in the flow was 54.0, packet's length was 54.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 77.22, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83361997.08927715, minimum packet length in the flow was 54.0, maximum packet length in the flow was 54.0, magnitue was 10.392304845413264, sum of packet lengths in the flow was 567.0, average packet length in the flow was 54.0, packet's length was 54.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 108.0, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83124514.3602152, minimum packet length in the flow was 42.0, maximum packet length in the flow was 42.0, magnitue was 9.16515138991168, sum of packet lengths in the flow was 441.0, average packet length in the flow was 42.0, packet's length was 42.0, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 0.0, was a malicious attack.",
+        "label": "malicious"
+    },
+    {
+        "input_data": "A network connection in which the time difference with the previous packet was 83007437.86304998, minimum packet length in the flow was 158.44, maximum packet length in the flow was 182.0, magnitue was 18.902246447407336, sum of packet lengths in the flow was 1887.44, average packet length in the flow was 178.77880282514184, packet's length was 180.76, number of packets with RST flag set in the same flow was 0.0, number of packets with URG flag set in the same flow was 0.0 and the header length was 180.76, was a malicious attack."
+    }
+]
+   

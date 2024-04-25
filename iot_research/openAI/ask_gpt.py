@@ -1,20 +1,23 @@
 import sys
 import openai
 import csv
+from openai import OpenAI
 
-#api_key = "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"     #Nwafor
-api_key = "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"      #ujjwal paid
-openai.api_key = api_key
+OPENAI_API_KEY = "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"      #Nwafor paid gpt-4.0
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 ########################################
+#USe this code only if you're testing a single input
 # only change the part below this line
 
 # def ask_gpt_question(sample_input):
 #     print("Hello one")
 #     # Generate predicted output for the sample input
-#     #fine_tuned_model_id = "ftjob-HsTm9Xl76LTIN2GanavVFpa3"
-#     fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8E8hgIg2"   #one
+#     #fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8E8hgIg2"   #one
+#     #fine_tuned_model_id = "ftjob-Sxa9S5B9xIiRGvmUbi5d0Qg7"  #one
+#     #fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8GCoKdm6"  #Latest trained nwafor
 #     #fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8E8t47mZ"
+#     fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8LOCIW5L"
 
 #     response = openai.ChatCompletion.create(
 #         model=fine_tuned_model_id,
@@ -52,33 +55,38 @@ openai.api_key = api_key
 
 def ask_gpt_question(sample_file):
     print("Hello one")
-    # Generate predicted output for the sample input
-    #fine_tuned_model_id = "ftjob-HsTm9Xl76LTIN2GanavVFpa3"
-    fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8E8hgIg2"   #one
-    #fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8E8t47mZ"
+    #If you want to test another model check the file named "all_models_ids.txt"
+    fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8yOe749j" #Multi class smote numeric
+ 
 
-
-    with open(sample_file, newline='') as csvfile_input, open("gpt_returned_results.csv", mode='w', newline='') as csvfile_output:
+    with open(sample_file, newline='') as csvfile_input, open("answers_multiclass_smote.csv", mode='w', newline='') as csvfile_output:
         reader = csv.reader(csvfile_input)
         writer = csv.writer(csvfile_output)
+        writer.writerow(["input_data", "label", "predicted_label"])
+        next(reader, None)  # Skips the header row
 
         # Loop over each row in the input CSV
+        i = 0
         for row in reader:
             test_value = row[0]
-            response = openai.ChatCompletion.create(
+            current_label = row[1]
+            response = client.chat.completions.create(
                 model=fine_tuned_model_id,
                 messages=[
-                    {"role": "system", "content": "What will be the output of the user provided input; malicious or not?"},
+                    {"role": "system", "content": "What will be the output of the system when processing the given input; 'DoS', 'MIRAI', 'Recon', 'Web-Based', 'Spoofing', 'BenignTraffic', 'Brute_Force'?"},
                     {"role": "user", "content": test_value}
                 ],
             )
-            output = response.choices[0].message
-            print(output['content'])
-            predictedValue = output['content']
+            output = response.choices[0].message.content.strip()
+            print(output)
+            predictedValue = output
+            i += 1
+            if (i % 100 == 0):
+                print(predictedValue)
+                print("Rows processed = ", i)
 
             # Write a new row to the output CSV file 
-            writer.writerow([test_value, predictedValue])
-
+            writer.writerow([test_value, current_label, predictedValue])
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

@@ -1,0 +1,15 @@
+This file contains the modelId for all the trained models using different data 
+
+
+# Generate predicted output for the sample input #All new dataset
+# fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal::8shWLylO" #New dataset sample
+#fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8uy41FTb"  #New dataset 50%
+# fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8vEVLgf0"  #New dataset 5%
+# fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8vRuWnRl"  #New dataset 0.5 percent
+# fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8xjyj4L2"  #New dataset (dos, non-dos) 0.02%
+# fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8xlRRxnd"  #New dataset (multi class SMOTE)
+#corrected below
+#fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8xzkohFJ"  # (Dos, non-dos soft categorical)0.02%
+fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8y0Dxq68" # (dos, non-dos) 0.02% 
+fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8y21uyNR" # Multi class with SMOTE soft
+fine_tuned_model_id = "ft:gpt-3.5-turbo-1106:personal::8yOe749j" #Multi class smote numeric
