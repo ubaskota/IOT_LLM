@@ -3,7 +3,7 @@ import json
 import sys
 
 #This code is to convert a csv file to json file and that json
-#file is used by openAi_finetune.py to train the model
+#file is used by openAi_finetune.py to train model
 def csv_to_json(input_csv, output_json):
     # Load the CSV file into a Pandas DataFrame
     df = pd.read_csv(input_csv)
