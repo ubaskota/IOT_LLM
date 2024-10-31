@@ -3,7 +3,7 @@ import openai
 import csv
 from openai import OpenAI
 
-OPENAI_API_KEY = "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"      #Nwafor paid gpt-4.0
+OPENAI_API_KEY = "key-here"      #Nwafor paid gpt-4.0
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 ########################################
