@@ -1,6 +1,6 @@
 import openai
 
-api_key = "sk-WugXI9hNrh2SBFeWyx" 
+api_key = "key-here" 
 fine_tune_id = "ftjob-l85LioJG"
 
 if __name__ == "__main__":
